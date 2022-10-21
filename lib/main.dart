@@ -13,13 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: AppTheme.darkTheme,
       title: 'Material App',
-      initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.getAppRoutes(),
       //* Una función que se llama cuando la aplicación intenta navegar a una ruta que no está definida
       //* en el mapa de `rutas`.
       onGenerateRoute: (settings) {
         return MaterialPageRoute(
-          builder: (context) => const AlertScreen(),
+          builder: (context) => const HomeScreen(),
         );
       },
     );

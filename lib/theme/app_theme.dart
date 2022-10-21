@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AppTheme {
   static final Color primary = Colors.pink.shade300;
@@ -11,17 +12,25 @@ class AppTheme {
     ),
   );
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
+    useMaterial3: true,
     primaryColor: Colors.pink.shade300,
-    appBarTheme: AppBarTheme(color: Colors.pink.shade400, elevation: 0.0),
+    appBarTheme: AppBarTheme(
+        color: Colors.pink.shade400,
+        elevation: 0.0,
+        centerTitle: true,
+        systemOverlayStyle:
+            SystemUiOverlayStyle(statusBarColor: Colors.pink[400])),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(foregroundColor: textButtom),
     ),
     //*elevatede button
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-          backgroundColor: AppTheme.primary,
-          shape: const StadiumBorder(),
-          elevation: 0.0),
+        backgroundColor: AppTheme.primary,
+        shape: const StadiumBorder(),
+        elevation: 0.0,
+        foregroundColor: Colors.white,
+      ),
     ),
     //*input decoration theme
     inputDecorationTheme: InputDecorationTheme(

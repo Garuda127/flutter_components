@@ -2,7 +2,6 @@ import 'package:flutter_components/models/models.dart';
 import '../Screens/screens_imports.dart';
 
 class AppRoutes {
-  static const initialRoute = '/Home';
   static final menuOption = <MenuOption>[
     MenuOption(
         route: '/ListView1Screen',
@@ -39,10 +38,20 @@ class AppRoutes {
         icon: Icons.format_align_center,
         name: 'Inputs Screen',
         screen: const InputScreen()),
+    MenuOption(
+        route: '/SliderScreen',
+        icon: Icons.slideshow,
+        name: 'Slider Screen',
+        screen: const SliderScreen()),
+    MenuOption(
+        route: '/ListViewBuilderScreen',
+        icon: Icons.list_alt,
+        name: 'ListViewBuilderScreen',
+        screen: const ListviewBuilderScreen()),
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
-    appRoutes.addAll({'/Home': (BuildContext context) => HomeScreen()});
+    appRoutes.addAll({'/Home': (BuildContext context) => const HomeScreen()});
     for (final options in menuOption) {
       appRoutes
           .addAll({options.route: (BuildContext context) => options.screen});

@@ -3,8 +3,8 @@ import 'package:flutter_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({Key? key}) : super(key: key);
-  final rutas = ['Listview1', 'Listview2', 'CardScreen', 'AlertScreen'];
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final menuOption = AppRoutes.menuOption;
