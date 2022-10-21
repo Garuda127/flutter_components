@@ -1,4 +1,4 @@
-import 'package:flutter_components/Screens/screens_imports.dart';
+import 'package:flutter/material.dart';
 
 class AppTheme {
   static final Color primary = Colors.pink.shade300;

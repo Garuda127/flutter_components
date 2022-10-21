@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_components/theme/app_theme.dart';
@@ -73,7 +75,9 @@ class AlertScreen extends StatelessWidget {
         children: [
           Center(
             child: ElevatedButton(
-              onPressed: () => displayDialog(context),
+              onPressed: () => Platform.isAndroid
+                  ? displayDialog(context)
+                  : displayDialogIOS(context),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: const [
